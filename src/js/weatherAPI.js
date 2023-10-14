@@ -1,5 +1,4 @@
-require("dotenv").config();
-
+const apikey = "1b488e34ed98363af2ee02532c22538a";
 let search = document.getElementById("search-location");
 search.addEventListener("keydown", (event) => {
   event.preventDefault();
