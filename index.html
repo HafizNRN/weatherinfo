@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/output.css" />
+    <title>INFORMASI CUACA - API OPENWEATHER</title>
+  </head>
+  <body class="bg-gray-900">
+    <div
+      class="wrapper-all w-screen min-h-screen flex items-center justify-between flex-col"
+    >
+      <section id="location-input" class="w-11/12 mx-auto mt-5 mb-16 relative">
+        <form action="" method="post" accept-charset="utf-8">
+          <input
+            type="text"
+            name="search-location"
+            id="search-location"
+            placeholder="City Name"
+            class="w-full h-10 block text-gray-900 outline-none bg-white p-1.5 rounded focus:text-white focus:bg-gray-800"
+          />
+        </form>
+      </section>
+      <section id="weather-info" class="mb-16">
+        <div id="weather-icon" class="flex items-center justify-center mx-auto">
+          <img
+            src="https://openweathermap.org/img/wn/02d.png"
+            alt="icon cuaca"
+            class="w-11/12"
+          />
+        </div>
+        <div id="weather-temp" class="text-center">
+          <strong class="text-white text-6xl"
+            ><span id="temp-data">0</span>°C</strong
+          >
+        </div>
+      </section>
+      <section id="details-info" class="flex mb-5">
+        <div id="info" class="flex flex-col items-center">
+          <img
+            src="./weather_icon/clock.png"
+            alt="icon waktu"
+            class="w-2/12 aspect-square mb-1.5"
+          />
+          <p class="text-center text-white">
+            COUNTRY<br />
+            <strong><span id="country-data">Type</span></strong>
+          </p>
+        </div>
+        <div id="info" class="flex flex-col items-center border-x border-white">
+          <img
+            src="./weather_icon/water.png"
+            alt="icon waktu"
+            class="w-2/12 aspect-square mb-1.5"
+          />
+          <p class="text-center text-white">
+            HUMIDITY<br />
+            <strong><span id="humidity-data">0</span>%</strong>
+          </p>
+        </div>
+        <div id="info" class="flex flex-col items-center">
+          <img
+            src="./weather_icon/wind.png"
+            alt="icon waktu"
+            class="w-2/12 aspect-square mb-1.5"
+          />
+          <p class="text-center text-white">
+            WIND<br />
+            <strong><span id="wind-data">0</span> m/s</strong>
+          </p>
+        </div>
+      </section>
+    </div>
+    <script src="./weatherAPI.js"></script>
+  </body>
+</html>
